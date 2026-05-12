@@ -1,0 +1,519 @@
+{
+  "info": {
+    "_postman_id": "d6db1e0c-6674-4973-a70f-7be3af3f6c6b",
+    "name": "Office Auth and Task API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51742729",
+    "_collection_link": "https://go.postman.co/collection/51742729-d6db1e0c-6674-4973-a70f-7be3af3f6c6b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User Credentials",
+      "item": [
+        {
+          "name": "Login User",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"admin@1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Sidharth Roy\",\r\n    \"email\": \"sidharth@gmail.com\",\r\n    \"password\": \"Sidharth@1234\",\r\n    \"phone\": \"9999999999\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User List",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/list",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Role Update",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"role\": \"manager\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/role/update/6a02ffe0802fc78caca44e6a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "role",
+                "update",
+                "6a02ffe0802fc78caca44e6a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Employee Details Update",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Imran Khan\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmZjMxODAyZmM3OGNhY2E0NGU2OSIsIm5hbWUiOiJBdmlqaXQgUm95IiwiZW1haWwiOiJhdmlqaXRAZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6Im1hbmFnZXIiLCJzdGF0dXMiOiJhY3RpdmUiLCJpYXQiOjE3Nzg1ODE2NjcsImV4cCI6MTc3ODY2ODA2N30.XMzMGYeRGoNt3AewaH9S3pwpBO4S5_RGNQNBAC9Zuo4\" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/update/6a02ffe0802fc78caca44e6a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "update",
+                "6a02ffe0802fc78caca44e6a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Employee Status Update",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"inactive\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/status/6a02ffe0802fc78caca44e6a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "status",
+                "6a02ffe0802fc78caca44e6a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Inactive Employee's",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/inactive/list",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "inactive",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Employee",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/user/delete/6a02ffe0802fc78caca44e6a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "delete",
+                "6a02ffe0802fc78caca44e6a"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Task Credentials",
+      "item": [
+        {
+          "name": "Create Task",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/task/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "task",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reassign Task",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/task/reassign/employee/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "task",
+                "reassign",
+                "employee",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pending Task List",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n      \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMDJmYjkwNzI3ZDU1ZGVkZmJlYTk2YyIsIm5hbWUiOiJTdXBlciBBZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiYXZhdGFyIjoiIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzc4NTgwOTc4LCJleHAiOjE3Nzg2NjczNzh9.xQUE1wykhLZvDnt1rAVMwJuYiO3tLWChbo5Cl3iedp4\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/task/pending",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "task",
+                "pending"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assigned task to employee list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/task/my-task",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "task",
+                "my-task"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Show Single Task",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/task/single/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "task",
+                "single",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Task Status",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/task/status/update/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "task",
+                "status",
+                "update",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/task/delete/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "task",
+                "delete",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
