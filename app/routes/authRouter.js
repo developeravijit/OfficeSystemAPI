@@ -8,13 +8,15 @@ const authRouter = express.Router();
 
 authRouter.post(
   "/create",
-  authCheck,
-  permission("admin"),
   uploadFile.single("avatar"),
   authController.createUser,
 );
 
 authRouter.post("/login", authController.userLogin);
+
+authRouter.post("/verify", authController.verifyEmail);
+
+authRouter.post("/refresh-token", authController.refreshToken);
 
 authRouter.get(
   "/list",
@@ -50,6 +52,7 @@ authRouter.get(
   permission("admin", "manager"),
   authController.inactiveUser,
 );
+
 authRouter.delete(
   "/delete/:id",
   authCheck,

@@ -56,6 +56,16 @@ const userSchema = new mongoose.Schema(
       default: "active",
     },
 
+    refreshToken: {
+      type: String,
+      default: "",
+    },
+
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
+
     isDeleted: {
       type: Boolean,
       default: false,
